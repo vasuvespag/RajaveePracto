@@ -23,6 +23,13 @@ public class SelectDoc {
 		Gender.click();
 	}
 	
+	@FindBy(xpath="//span[normalize-space()='Female Doctor']")
+	WebElement GenderS;
+	public void GenderS() {
+		GenderS.click();
+	}
+	
+	
 	@FindBy(xpath="//div[contains(@class,'c-listing-wrapper')]//div[4]//div[1]//div[1]//div[2]//div[1]//div[1]//div[2]//div[1]//button[1]//div[1]")
 	WebElement BookVisit;
 	public void BookVisit() {
