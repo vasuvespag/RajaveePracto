@@ -11,57 +11,53 @@ Scenario: Select Doctor
     Given I have searched for doctors
     When I select a specific location
     And I select a gender
-    Then I should be able to click Book clinic visit
+    And I select on book clinic visits
+    Then I Successfully Book clinic visit
 
 Scenario: Select Time Slot
-    Given I have clicked "Book clinic visit"
+    Given I book clinic visit
     When I select a date
     And I select a time slot
     Then the time slot should be successfully selected
-    
-Scenario: Unable to Schedule demo
+        
+Scenario Outline: Unable to Schedule demo
+    Given I am on the time slot page
     When I click For Corporates
     And I click on Health & Wellness plans
-    And I enter Name as <"<name>">
-    And I enter Organization name as <"<organization name>">
-    And I enter Phone number as <"<name>">
-    And I enter Official Email ID as <"<email id>">
-    And I select Organization size 
-    And I select Interested in
+    And I enter Name as <"<Uname>">
+    And I enter Organization name as <"<organizationname>">
+    And I enter Phone number as <"<Uname>">
+    And I enter Official Email ID as <"<email>">
+    And I click Organization size 
+    And I select 10000+
+    And I click Interested in
+    And I select taking a demo
     Then I am Unable to Schedule a demo
     
     Examples:
-     | name | organization name | name | email Id |
+     | Uname | organizationname | Uname | email |
      | Poovarasan | Capgemini | Poovarasan | poovarasandl2002@gmail.com |
      | Rajavee | Capgemini | Rajavee | rajaveerajan@gmail.com |
      
     
     
     
-Scenario: Successfully scheduled a demo
+Scenario Outline: Successfully scheduled a demo
     When I click For Corporates
     And I click on Health & Wellness plans
-    And I enter Name as <"<name>">
-    And I enter Organization name as <"<organization name>">
-    And I enter Phone number as <"<phone number>">
-    And I enter Official Email ID as <"<email id>">
+    And I enter Name as <"<Uname>">
+    And I enter Organization name as <"<organizationname>">
+    And I enter Phone number as <"<Phone>">
+    And I enter Official Email ID as <"<email>">
     And I select Organization size 
+    And I select 10000+
     And I select Interested in
+    And I select taking a demo
     And I select Schedule a demo
     Then I Successfully Scheduled a demo
     
     Examples:
-     | name | organization name | phone number | email Id |
+     | Uname | organizationname | Phone | email |
      | Poovarasan | Capgemini | 7890654321 | poovarasandl2002@gmail.com |
      | Rajavee | Capgemini | 8976543210 | rajaveerajan@gmail.com |
-    
-    
-    
-    
-    
-    
-
-    
-    
-    
     
