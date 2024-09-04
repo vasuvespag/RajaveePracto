@@ -21,7 +21,7 @@ public class FindDoc {
 	public void SearchDoc() {
 		SearchDoc.click();
 	}
-	@FindBy(xpath="//body/div[@id='root']/div[@id='container']/div[@class='c-home']/div[@class='c-jumbo']/div[@class='c-jumbo__banner']/div[@class='c-jumbo__omni_container']/div[@class='c-omni-wrapper']/div[@id='c-omni-container']/div[@class='c-omni u-clearfix']/div[@class='c-omni__wrapper u-clearfix c-omni__wrapper--keyword']/div[@class='c-omni-suggestion-list']/div[@class='c-omni-suggestion-group']/div[4]/span[1]\r\n")
+	@FindBy(xpath="//div[normalize-space()='Dentist']")
 	WebElement Clinic;
 	public void Clinic() {
 		Clinic.click();
