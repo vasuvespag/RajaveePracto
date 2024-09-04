@@ -11,10 +11,26 @@ public class Subscribe {
 		this.driver =driver;
 		PageFactory.initElements(driver, this);
 		}
-	@FindBy(xpath="//span[@class='nav-interact']")
-	WebElement ForCorp;
-	public void ForCorp() {
-		ForCorp.click();
+	@FindBy(xpath="//i[@class='tab-icon c-icon__img icon-ic_read']")
+	WebElement ReadArt;
+	public void ReadArt() {
+		ReadArt.click();
 	}
+	@FindBy(xpath="//span[normalize-space()='Healthy Hair']")
+	WebElement HHair;
+	public void HHair() {
+		HHair.click();
+	}
+	@FindBy(xpath="//input[@placeholder='Your Email Address']")
+	WebElement Mail;
+	public void Mail() {
+		Mail.click();
+	}
+	@FindBy(xpath="//i[@class='fit-feed-icon icon-ic_back']")
+	WebElement Arrow;
+	public void Arrow() {
+		Arrow.click();
+	}
+	
 
 }
