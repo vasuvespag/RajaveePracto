@@ -1,22 +1,39 @@
 Feature: Find Doctors
-Scenario: Find Doctors
-    Given I am on the Practo home page
-    When I click on Find doctors
-    And I select a location as <"<Chennai>">
-    And I choose Clinics as <"<General Physician>">
-    And I should see a list of doctors
-    And I select a specific location
-    And I select a gender
-    And I select on book clinic visits
-    Then I Successfully Book clinic visit
+Background: Accessing Find Doctors
+Given User is on Practo home page
+When User clicks on Find Doctors
 
-Scenario: Select Time Slot
-    Given I book clinic visit
-    When I select a date
-    And I select a time slot
-    And I enter phone number
+@Tag1
+Scenario: Book dentist clinic visit
+    
+    When User selects a location
+    And User chooses Clinics as <"Dentist">
+    And User selects a specific location
+    And User select a gender
+    And User Selects Male
+    And User selects on book clinic visits
+    And User selects a date
+    And User selects a time slot
+    And User enters phone number
     Then the time slot should be successfully selected
-        
-
- 
+#@Tag2  
+#Scenario: Contact us
+    #When User clicks on Security & Help
+    #And User clicks on Data Security
+    #And User clicks on For Providers
+    #And User clicks on Learn more
+    #And User clicks on Contact Us
+    #And User enters valid Name
+    #And User enters valid mobile number
+    #And User enters valid email
+    #And User selects a country
+    #And User enters city
+    #And User selects Interested In
+    #And User selects I am a
+    #And User enters a message
+    #And User clicks submit
+    #Then User has successfully reached out to practo
+        #
+#
+ #
    

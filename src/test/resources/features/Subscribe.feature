@@ -1,8 +1,13 @@
 Feature: Subscribe for Hair care tips
+Background: Accessing Find Doctors
+Given User is on Practo home page
+When User clicks on Find Doctors
+
+@Tag5
 Scenario: Subscribe for Haircare tips
-    Given I am on Find doctors page
-    When I click on Read articles
-    And I click on healthy hair
-    And I Enter email address
-    And I select the arrow button
-    Then I successfully subscribed for health tips
+    
+    When User clicks on Read articles
+    And User clicks on healthy hair
+    And User Enters email address
+    And User selects the arrow button
+    Then User has successfully subscribed for health tips

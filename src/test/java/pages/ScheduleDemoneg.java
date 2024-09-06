@@ -23,23 +23,23 @@ public class ScheduleDemoneg {
 	}
 	@FindBy(xpath="//header[@id='header']//input[@id='name']")
 	WebElement name;
-	public void name(String Uname) {
-		name.sendKeys(Uname);
+	public void name() {
+		name.sendKeys();
 	}
 	@FindBy(xpath="//header[@id='header']//input[@id='organizationName']")
 	WebElement Oname;
-	public void Oname(String organizationname) {
-		Oname.sendKeys(organizationname);
+	public void Oname() {
+		Oname.sendKeys();
 	}
 	@FindBy(xpath="//header[@id='header']//input[@id='contactNumber']")
 	WebElement num;
-	public void num(String Uname) {
-		num.sendKeys(Uname);
+	public void num() {
+		num.sendKeys();
 	}
 	@FindBy(xpath="//header[@id='header']//input[@id='officialEmailId']")
 	WebElement mail;
-	public void mail(String email) {
-		mail.sendKeys(email);
+	public void mail() {
+		mail.sendKeys();
 	}
 	@FindBy(xpath="//header[@id='header']//select[@id='organizationSize']")
 	WebElement Osize;

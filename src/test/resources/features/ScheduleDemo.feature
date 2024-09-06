@@ -1,32 +1,37 @@
 Feature: Schedule a demo
+Background: Accessing Find Doctors
+Given User is on Practo home page
+When User clicks on Find Doctors
+
+@Tag3
 Scenario: Unsuccessfull in Schedule demo
-    Given I am on the time slot page
-    When I click For Corporates
-    And I click on Health & Wellness plans
-    And I enter Name
-    And I enter Organization name
-    And I enter invalid Phone number
-    And I enter invalid Official Email ID
-    And I click Organization size 
-    And I select 10000+
-    And I click Interested in
-    And I select taking a demo
+    When User is on the time slot page
+    And User clicks For Corporates
+    And User clicks on Health & Wellness plans
+    And User enters Name
+    And User enters Organization name
+    And User enters invalid Phone number
+    And User enters invalid Official Email ID
+    And User clicks Organization size 
+    And User selects 10000+
+    And User clicks Interested in
+    And User selects taking a demo
     Then Scheduling a Demo is Unclickkable
  
-        
+@Tag4       
 Scenario Outline: Successfully scheduled a demo
-    Given I click For Corporates
-    When I click on Health & Wellness plans
-    And I enter Name as <"<Uname>">
-    And I enter Organization name as <"<organizationname>">
-    And I enter Phone number as <"<Phone>">
-    And I enter Official Email ID as <"<email>">
-    And I select Organization size 
-    And I select 10000+
-    And I select Interested in
-    And I select taking a demo
-    And I select Schedule a demo
-    Then I Successfully Scheduled a demo
+    When User clicks For Corporates
+    And User clicks on Health & Wellness plans
+    And User enters Name as <"<Uname>">
+    And User enters Organization name as <"<organizationname>">
+    And User enters Phone number as <"<Phone>">
+    And User enters Official Email ID as <"<email>">
+    And User selects Organization size 
+    And User selects 10000+
+    And User selects Interested in
+    And User selects taking a demo
+    And User selects Schedule a demo
+    Then User has Successfully Scheduled a demo
     
     Examples:
      | Uname | organizationname | Phone | email |
